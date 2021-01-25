@@ -1,0 +1,10 @@
+task checkDuplication() {
+    group 'Verification'
+    description 'Checks for duplicate code using simian analyzer'
+    def process = "java -jar ./simian-2.5.10.jar -language=java -threshold=10 -excludes=**/*test*.kt **/*.kt".execute()
+    process.waitForProcessOutput(System.out, System.err)
+    if (process.exitValue() == 1) {
+        throw new Exception("Duplicate Found Check your code ...")
+    }
+
+}
