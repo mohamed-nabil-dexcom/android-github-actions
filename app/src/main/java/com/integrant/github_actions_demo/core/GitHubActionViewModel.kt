@@ -1,8 +1,7 @@
 package com.integrant.github_actions_demo.core
 
 class GitHubActionViewModel() {
-
-
+    
     fun sumTwoNumbers(num1: Int, num2: Int): Int {
         return num1 + num2
     }
