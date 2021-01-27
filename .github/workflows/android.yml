@@ -98,12 +98,11 @@ jobs:
     name: SonarQube Trigger
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
     - name: SonarQube Scan
-      uses: achilleslinux/sonarqube-action@master
+      uses: monstar-lab-oss/sonarqube-github-action@v1.0.1
       with:
-        host: ${{ secrets.SONARQUBE_HOST }}
-        login: ${{ secrets.SONARQUBE_TOKEN }}  
+        url: ${{ secrets.SONARQUBE_HOST }}
+        token: ${{ secrets.SONARQUBE_TOKEN }}  
         
   build:
     
