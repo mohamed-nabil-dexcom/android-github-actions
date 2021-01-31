@@ -27,4 +27,9 @@ class GitHubActionViewModelTests {
     fun divisionWorksCorrectly() {
         assertEquals(2, gitHubActionViewModel.divTwoNumbers(4, 2))
     }
+
+    @Test
+    fun multipleByTenWorksCorrectly() {
+        assertEquals(50, gitHubActionViewModel.multipleByTen(5))
+    }
 }
