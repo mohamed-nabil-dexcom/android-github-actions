@@ -1,10 +1,24 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'org.sonarqube'
 }
 apply from: "$rootDir/jacoco.gradle"
 apply from: "$rootDir/duplication.gradle"
 
+sonarqube {
+    properties {
+        property "sonar.projectName", "TestApp"
+        property "sonar.projectKey", "TestApp"
+        property "sonar.host.url", "http://4e6c9a680276.ngrok.io"
+        property "sonar.language", "kotlin "
+        property "sonar.sources", "src/main/java"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.login", "admin"
+        property "sonar.password", "integrant"
+        property "sonar.coverage.exclusions", "src/androidTest/java"
+    }
+}
 
 afterEvaluate {
     testReleaseUnitTest.enabled(true)
