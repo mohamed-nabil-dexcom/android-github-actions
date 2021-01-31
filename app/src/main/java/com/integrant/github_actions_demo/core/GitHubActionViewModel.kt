@@ -18,5 +18,8 @@ class GitHubActionViewModel() {
     fun divTwoNumbers(num1: Int, num2: Int): Int {
         return num1 / num2
     }
+    fun multipleByTen(num: Int) : Int{
+        return num * 10
+    }
 
 }
