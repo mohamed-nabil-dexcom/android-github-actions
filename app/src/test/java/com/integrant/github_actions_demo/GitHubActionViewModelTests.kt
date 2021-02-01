@@ -32,4 +32,8 @@ class GitHubActionViewModelTests {
     fun multipleByTenWorksCorrectly() {
         assertEquals(50, gitHubActionViewModel.multipleByTen(5))
     }
+    @Test
+    fun multipleByTwentyWorksCorrectly() {
+        assertEquals(50, gitHubActionViewModel.multipleByTwenty(5))
+    }
 }

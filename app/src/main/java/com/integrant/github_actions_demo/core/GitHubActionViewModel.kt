@@ -26,4 +26,8 @@ class GitHubActionViewModel() {
 
     private fun unusedFunction() {}
 
+    fun multipleByTwenty(num: Int) : Int{
+        return num * 20
+    }
+
 }
