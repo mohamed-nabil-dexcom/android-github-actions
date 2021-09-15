@@ -54,7 +54,7 @@ jobs:
           name: unit-tests-results
           path: app/build/reports/tests/testDebugUnitTest/index.html
       - name: Publish Unit Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1.7
+        uses: EnricoMi/publish-unit-test-result-action@v1
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
